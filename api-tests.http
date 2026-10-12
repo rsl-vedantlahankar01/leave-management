@@ -1,0 +1,33 @@
+### 1. Create a Leave Request (POST)
+POST http://localhost:8080/leaves
+Content-Type: application/json
+
+{
+  "employeeId": 101,
+  "leaveType": "SICK",
+  "startDate": "2026-10-15",
+  "endDate": "2026-10-17",
+  "reason": "Flu"
+}
+
+### 2. Get All Leave Requests (GET)
+GET http://localhost:8080/leaves
+
+### 3. Get Leave Request by ID (GET)
+GET http://localhost:8080/leaves/1
+
+### 4. Update Leave Request (PUT)
+PUT http://localhost:8080/leaves/1
+Content-Type: application/json
+
+{
+  "employeeId": 101,
+  "leaveType": "SICK",
+  "startDate": "2026-10-15",
+  "endDate": "2026-10-20",
+  "reason": "Flu extended",
+  "status": "APPROVED"
+}
+
+### 5. Delete Leave Request (DELETE)
+DELETE http://localhost:8080/leaves/1
